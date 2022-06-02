@@ -39,7 +39,7 @@ function totalBelanjaan() {
 }
 
 // ! JANGAN DIMODIFIKASI
-function main() {
+const main = () => {
   console.log("Selamat datang customer");
 
   console.log("Belanjaan Anda adalah:");
@@ -47,7 +47,7 @@ function main() {
   console.log(
     "\nTotal Belanjaan Anda adalah Rp. " + totalBelanjaan?.(dataBelanjaan)
   );
-}
+};
 
 main();
 
