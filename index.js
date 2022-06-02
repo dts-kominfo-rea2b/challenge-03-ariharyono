@@ -21,25 +21,25 @@ const dataBelanjaan = [
 ];
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const listBelanjaan = () => {
+function listBelanjaan() {
   let belanja = [];
   for (let i = 0; i < dataBelanjaan.length; i++) {
     belanja[i] = `- ${dataBelanjaan[i].nama} x ${dataBelanjaan[i].kuantitas}`;
   }
   return belanja;
-};
+}
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const totalBelanjaan = () => {
+function totalBelanjaan() {
   let total = 0;
   for (let i = 0; i < dataBelanjaan.length; i++) {
     total += dataBelanjaan[i].harga * dataBelanjaan[i].kuantitas;
   }
   return total;
-};
+}
 
 // ! JANGAN DIMODIFIKASI
-const main = () => {
+function main() {
   console.log("Selamat datang customer");
 
   console.log("Belanjaan Anda adalah:");
@@ -47,7 +47,7 @@ const main = () => {
   console.log(
     "\nTotal Belanjaan Anda adalah Rp. " + totalBelanjaan?.(dataBelanjaan)
   );
-};
+}
 
 main();
 
