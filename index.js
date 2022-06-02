@@ -32,8 +32,8 @@ const listBelanjaan = () => {
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
 const totalBelanjaan = () => {
   let total = 0;
-  for (let i = 0; i < dataBelanjaan.length; i++) {
-    total += dataBelanjaan[i].harga * dataBelanjaan[i].kuantitas;
+  for (const element of dataBelanjaan) {
+    total += element.harga * element.kuantitas;
   }
   return total;
 };
