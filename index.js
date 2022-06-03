@@ -26,7 +26,7 @@ const listBelanjaan = (belanja) => {
 }
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-function totalBelanjaan(belanja) {
+const totalBelanjaan = (belanja) => {
   let total = 0;
   for (const element of belanja) {
     total += element.harga * element.kuantitas;
@@ -35,7 +35,7 @@ function totalBelanjaan(belanja) {
 }
 
 // ! JANGAN DIMODIFIKASI
-function main() {
+const main = () => {
   console.log("Selamat datang customer");
 
   console.log("Belanjaan Anda adalah:");
@@ -43,7 +43,7 @@ function main() {
   console.log(
     "\nTotal Belanjaan Anda adalah Rp. " + totalBelanjaan?.(dataBelanjaan)
   );
-}
+};
 
 main();
 
