@@ -31,8 +31,8 @@ describe("Function - listBelanjaan", () => {
   it("should output right things with original data", async () => {
     expect(Array.isArray(listBelanjaan(dataBelanjaan))).toBe(true);
     expect(listBelanjaan(dataBelanjaan).length).toBe(dataBelanjaan.length);
-    expect(listBelanjaan(dataBelanjaan)[0]).toBe("- Minyak Goreng Delima x 2");
-    expect(listBelanjaan(dataBelanjaan)[1]).toBe("- Beras Mamos x 1");
+    expect(listBelanjaan(dataBelanjaan)[0]).toBe("- Minyak Goreng Delima X 2");
+    expect(listBelanjaan(dataBelanjaan)[1]).toBe("- Beras Mamos X 1");
     expect(listBelanjaan(dataBelanjaan)[2]).toBe(
       "- Larutan Cap Kaki Empat x 8"
     );
@@ -41,9 +41,9 @@ describe("Function - listBelanjaan", () => {
   it("should output right things with mockup data", async () => {
     expect(Array.isArray(listBelanjaan(mockBelanjaan))).toBe(true);
     expect(listBelanjaan(mockBelanjaan).length).toBe(mockBelanjaan.length);
-    expect(listBelanjaan(mockBelanjaan)[0]).toBe("- Buku x 2");
-    expect(listBelanjaan(mockBelanjaan)[1]).toBe("- Bimoli x 1");
-    expect(listBelanjaan(mockBelanjaan)[2]).toBe("- Notepad x 3");
-    expect(listBelanjaan(mockBelanjaan)[3]).toBe("- Mystery Box x 4");
+    expect(listBelanjaan(mockBelanjaan)[0]).toBe("- Buku X 2");
+    expect(listBelanjaan(mockBelanjaan)[1]).toBe("- Bimoli X 1");
+    expect(listBelanjaan(mockBelanjaan)[2]).toBe("- Notepad X 3");
+    expect(listBelanjaan(mockBelanjaan)[3]).toBe("- Mystery Box X 4");
   });
 });
