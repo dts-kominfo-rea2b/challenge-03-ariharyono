@@ -21,25 +21,21 @@ const dataBelanjaan = [
 ];
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const listBelanjaan = () => {
-  let belanja = [];
-  for (let i = 0; i < dataBelanjaan.length; i++) {
-    belanja[i] = `- ${dataBelanjaan[i].nama} X ${dataBelanjaan[i].kuantitas}`;
-  }
-  return belanja;
-};
+const listBelanjaan = (belanja) => {
+  return belanja.map(data => '- ' + data.nama + ' x ' + data.kuantitas)
+}
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const totalBelanjaan = () => {
+function totalBelanjaan(belanja) {
   let total = 0;
-  for (const element of dataBelanjaan) {
+  for (const element of belanja) {
     total += element.harga * element.kuantitas;
   }
   return total;
-};
+}
 
 // ! JANGAN DIMODIFIKASI
-const main = () => {
+function main() {
   console.log("Selamat datang customer");
 
   console.log("Belanjaan Anda adalah:");
@@ -47,7 +43,7 @@ const main = () => {
   console.log(
     "\nTotal Belanjaan Anda adalah Rp. " + totalBelanjaan?.(dataBelanjaan)
   );
-};
+}
 
 main();
 

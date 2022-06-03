@@ -25,7 +25,11 @@ const mockBelanjaan = [
 
 describe("Function - listBelanjaan", () => {
   it("should be a function", async () => {
-    expect(typeof listBelanjaan).toBe("function");
+    expect(typeof listBelanjaan).toBe(newFunction());
+
+    function newFunction() {
+      return "function";
+    }
   });
 
   it("should output right things with original data", async () => {
